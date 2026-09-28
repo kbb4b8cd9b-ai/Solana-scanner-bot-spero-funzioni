@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solana Risk Scanner</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main class="wrap">
+<section class="card hero">
+<div class="badge">SOLANA SECURITY</div>
+<h1>Solana Risk Scanner</h1>
+<p>Analisi difensiva on-chain. Nessun ordine viene inviato.</p>
+<div class="form"><input id="mint" autocomplete="off" spellcheck="false" placeholder="Inserisci il mint address Solana"><button id="scanBtn">ANALIZZA TOKEN</button></div>
+<div id="status" class="status"></div>
+</section>
+<section id="result" class="hidden">
+<div class="grid">
+<div class="card score-card"><span>Risk Score</span><strong id="score">—</strong><b id="level">—</b></div>
+<div class="card"><h3>Autorità</h3><div id="authority"></div></div>
+<div class="card"><h3>Token</h3><div id="tokenInfo"></div></div>
+</div>
+<div class="card"><h3>Motivi del rischio</h3><ul id="reasons"></ul></div>
+<div class="card"><h3>Concentrazione holder</h3><div id="holders"></div></div>
+<div class="card"><h3>Moduli</h3><div id="modules"></div></div>
+</section>
+<section class="card note"><b>Nota:</b> screening difensivo, non garanzia di sicurezza. Nessuna transazione viene inviata. Il controllo holder usa i top holder restituiti dall'RPC; non considera automaticamente LP, burn address o wallet collegati.</section>
+</main><script src="config.js"></script><script src="app.js"></script></body>
+</html>
